@@ -1,0 +1,963 @@
+theme: Minecraft Inventory Dark(By WasiXGamer)
+disableNewStartMenuLayout: forceNewLayout
+styleConstants:
+  - Startbg=<ImageBrush ImageSource="https://raw.githubusercontent.com/wasixgamer/windows-11-start-menu-styling-guide/refs/heads/Minecraft/Themes/Minecraft%20Inventory/Assets/inventorybg-dark.png" Stretch="Fill"/>
+  - Searchbg=<ImageBrush ImageSource="https://raw.githubusercontent.com/wasixgamer/windows-11-start-menu-styling-guide/refs/heads/Minecraft/Themes/Minecraft%20Inventory/Assets/searchbg-dark.png" Stretch="Fill"/>
+controlStyles:
+  - target: Windows.UI.Xaml.Internal.RootScrollViewer
+    styles:
+      - ActualWidth=>InventoryHostWidth
+      - ActualHeight=>InventoryHostHeight
+  - target: Windows.UI.Xaml.Internal.RootScrollViewer > ScrollContentPresenter > Border
+    styles:
+      - VerticalAlignment=Bottom
+      - HorizontalAlignment=Center
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot
+    styles:
+      - Margin=0,0,0,12
+      - HorizontalAlignment=Center
+      - VerticalAlignment=Bottom
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot
+    styles:
+      - Padding=0
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot
+    styles:
+      - MinHeight=0
+      - MinWidth=0
+      - MaxWidth=10000
+      - MaxHeight=10000
+      - Margin=0
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot > Rectangle#MaxHeightEnforcer
+    styles:
+      - Visibility=Collapsed
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot > Border#StartDropShadow
+    styles:
+      - Visibility=Collapsed
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot > Grid#MainMenu
+    styles:
+      - Width=640
+      - MinWidth=640
+      - MaxWidth=640
+      - Height=733.702914
+      - MinHeight=733.702914
+      - MaxHeight=733.702914
+      - Margin=0
+      - HorizontalAlignment=Center
+      - VerticalAlignment=Center
+      - RenderTransformOrigin=0.5,0.5
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot > Grid#MainMenu
+    styles:
+      - RowDefinitions:=<RowDefinitionCollection><RowDefinition Height="*"/></RowDefinitionCollection>
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot > Grid#MainMenu
+    styles:
+      - ColumnDefinitions:=<ColumnDefinitionCollection><ColumnDefinition Width="*"/></ColumnDefinitionCollection>
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot > Grid#MainMenu
+    styles:
+      - Padding=0
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot > Grid#MainMenu > Border#AcrylicBorder
+    styles:
+      - Grid.Row=0
+      - Grid.Column=0
+      - Grid.RowSpan=1
+      - Grid.ColumnSpan=1
+      - Width=640
+      - MinWidth=640
+      - MaxWidth=640
+      - Height=733.702914
+      - MinHeight=733.702914
+      - MaxHeight=733.702914
+      - Margin=0
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot > Grid#MainMenu > Border#AcrylicBorder
+    styles:
+      - BorderThickness=0
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot > Grid#MainMenu > Border#AcrylicBorder
+    styles:
+      - Background:=$Startbg
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot > Grid#MainMenu > Grid#MainContent
+    styles:
+      - Grid.Row=0
+      - Grid.Column=0
+      - Grid.RowSpan=1
+      - Grid.ColumnSpan=1
+      - Width=640
+      - MinWidth=640
+      - MaxWidth=640
+      - Height=733.702914
+      - MinHeight=733.702914
+      - MaxHeight=733.702914
+      - Margin=0
+      - RenderTransform:=<TranslateTransform X="0" Y="0"/>
+      - HorizontalAlignment=Left
+      - VerticalAlignment=Top
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot > Grid#MainMenu > Grid#MainContent
+    styles:
+      - RowDefinitions:=<RowDefinitionCollection><RowDefinition Height="*"/></RowDefinitionCollection>
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot > Grid#MainMenu > Grid#MainContent
+    styles:
+      - ColumnDefinitions:=<ColumnDefinitionCollection><ColumnDefinition Width="*"/></ColumnDefinitionCollection>
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot > Grid#MainMenu > Grid#MainContent
+    styles:
+      - Padding=0
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot > Grid#MainMenu > Grid#MainContent
+    styles:
+      - Background:=
+  - target: Border#AcrylicOverlay
+    styles:
+      - Visibility=Collapsed
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot > Grid#MainMenu > Grid#MainContent > Grid[1]
+    styles:
+      - Grid.Row=0
+      - Grid.Column=0
+      - Grid.RowSpan=1
+      - Grid.ColumnSpan=1
+      - Width=640
+      - MinWidth=640
+      - MaxWidth=640
+      - Height=733.702914
+      - MinHeight=733.702914
+      - MaxHeight=733.702914
+      - Margin=0
+      - RenderTransform:=<TranslateTransform X="0" Y="0"/>
+      - HorizontalAlignment=Left
+      - VerticalAlignment=Top
+      - Canvas.ZIndex=10
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot > Grid#MainMenu > Grid#MainContent > Grid[1]
+    styles:
+      - Padding=0
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot > Grid#MainMenu > Grid#MainContent > Grid[1]
+    styles:
+      - Background:=
+  - target: StartMenu.SearchBoxToggleButton#SearchBoxToggleButton
+    styles:
+      - Grid.Row=0
+      - Grid.Column=0
+      - Grid.RowSpan=1
+      - Grid.ColumnSpan=1
+      - Width=300
+      - MinWidth=300
+      - MaxWidth=300
+      - Height=30
+      - MinHeight=30
+      - MaxHeight=30
+      - Margin=305,250,0,0
+      - HorizontalAlignment=Left
+      - VerticalAlignment=Top
+  - target: StartMenu.SearchBoxToggleButton#SearchBoxToggleButton
+    styles:
+      - Padding=0
+  - target: StartMenu.SearchBoxToggleButton#SearchBoxToggleButton > Grid
+    styles:
+      - Width=300
+      - MinWidth=300
+      - MaxWidth=300
+      - Height=30
+      - MinHeight=30
+      - MaxHeight=30
+      - Margin=0
+      - RenderTransform:=<TranslateTransform X="0" Y="0"/>
+  - target: StartMenu.SearchBoxToggleButton#SearchBoxToggleButton > Grid
+    styles:
+      - Padding=0
+  - target: StartMenu.SearchBoxToggleButton#SearchBoxToggleButton > Grid
+    styles:
+      - BorderBrush:=#111111
+      - BorderThickness=3,3,0,0
+      - Background:=#1D1D1D
+  - target: StartMenu.SearchBoxToggleButton#SearchBoxToggleButton > Grid > Border#BorderElement
+    styles:
+      - CornerRadius=0
+      - BorderBrush:=#383838
+      - BorderThickness=0,0,3,3
+      - Background=Transparent
+  - target: StartMenu.SearchBoxToggleButton#SearchBoxToggleButton > * > TextBlock#PlaceholderText
+    styles:
+      - Margin=8,0,0,3
+      - Text=Search Inventory
+      - FontWeight=Bold
+  - target: StartMenu.SearchBoxToggleButton#SearchBoxToggleButton > Grid > Image#SearchIconOff, StartMenu.SearchBoxToggleButton#SearchBoxToggleButton > Grid > Image#SearchIconOn
+    styles:
+      - Visibility=Collapsed
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot > Grid#MainMenu > Grid#MainContent > Frame#StartFrame
+    styles:
+      - Grid.Row=0
+      - Grid.Column=0
+      - Grid.RowSpan=1
+      - Grid.ColumnSpan=1
+      - Height=327.50533
+      - MinHeight=327.50533
+      - MaxHeight=327.50533
+      - HorizontalAlignment=Left
+      - VerticalAlignment=Top
+      - Visibility=Visible
+      - Opacity=1
+      - Canvas.ZIndex=20
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot > Grid#MainMenu > Grid#MainContent > Frame#StartFrame
+    styles:
+      - Padding=0
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot > Grid#MainMenu > Grid#MainContent > Grid#NavPanePlaceholder
+    styles:
+      - Grid.Row=0
+      - Grid.Column=0
+      - Grid.RowSpan=1
+      - Grid.ColumnSpan=1
+      - Width=640
+      - MinWidth=640
+      - MaxWidth=640
+      - Height=65.501066
+      - MinHeight=65.501066
+      - MaxHeight=65.501066
+      - Margin=0,642.729211,0,0
+      - RenderTransform:=<TranslateTransform X="0" Y="0"/>
+      - HorizontalAlignment=Left
+      - VerticalAlignment=Top
+      - Canvas.ZIndex=10
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot > Grid#MainMenu > Grid#MainContent > Grid#NavPanePlaceholder
+    styles:
+      - Padding=0
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot > Grid#MainMenu > Grid#MainContent > Grid#NavPanePlaceholder
+    styles:
+      - Background=Transparent
+  - target: StartMenu.FolderModal#StartFolderModal > Grid#Root > Border
+    styles:
+      - CornerRadius=5
+  - target: StartMenu.FolderModal#StartFolderModal > Grid#Root > Border
+    styles:
+      - Background:=#1E1E1E
+  - target: StartMenu.FolderModal#StartFolderModal > Grid#Root > Border
+    styles:
+      - BorderBrush:=#373737
+  - target: StartMenu.FolderModal#StartFolderModal > Grid#Root > Border
+    styles:
+      - BorderThickness=5
+  - target: Cortana.UI.Views.TaskbarSearchPage
+    styles:
+      - Padding=0
+  - target: Cortana.UI.Views.TaskbarSearchPage > Grid#RootGrid
+    styles:
+      - Width=640
+      - MinWidth=640
+      - MaxWidth=640
+      - Height=733.702914
+      - MinHeight=733.702914
+      - MaxHeight=733.702914
+  - target: Cortana.UI.Views.TaskbarSearchPage > Grid#RootGrid
+    styles:
+      - RowDefinitions:=<RowDefinitionCollection><RowDefinition Height="*"/></RowDefinitionCollection>
+  - target: Cortana.UI.Views.TaskbarSearchPage > Grid#RootGrid
+    styles:
+      - ColumnDefinitions:=<ColumnDefinitionCollection><ColumnDefinition Width="*"/></ColumnDefinitionCollection>
+  - target: Cortana.UI.Views.TaskbarSearchPage > Grid#RootGrid
+    styles:
+      - Padding=0
+  - target: Cortana.UI.Views.TaskbarSearchPage > Grid#RootGrid
+    styles:
+      - Background:=$Searchbg
+  - target: Cortana.UI.Views.TaskbarSearchPage > Grid#RootGrid > Grid#OuterBorderGrid > Grid#BorderGrid
+    styles:
+      - Width=640
+      - Margin=0
+      - HorizontalAlignment=Center
+  - target: Cortana.UI.Views.TaskbarSearchPage > Grid#RootGrid > Grid#OuterBorderGrid > Grid#BorderGrid
+    styles:
+      - Padding=0
+  - target: Cortana.UI.Views.TaskbarSearchPage > Grid#RootGrid > Grid#OuterBorderGrid > Grid#BorderGrid > Border#AppBorder
+    styles:
+      - Background=Transparent
+  - target: Cortana.UI.Views.TaskbarSearchPage > Grid#RootGrid > Grid#OuterBorderGrid > Grid#BorderGrid > Border#AppBorder
+    styles:
+      - BorderThickness=0
+  - target: Cortana.UI.Views.TaskbarSearchPage > * > Border#LayerBorder, Cortana.UI.Views.TaskbarSearchPage > * > Border#dropshadow, Cortana.UI.Views.TaskbarSearchPage > * > Border#TaskbarSearchBackground
+    styles:
+      - Visibility=Collapsed
+  - target: Cortana.UI.Views.TaskbarSearchPage > Grid#RootGrid > Cortana.UI.Views.RichSearchBoxControl#SearchBoxControl
+    styles:
+      - Grid.Row=0
+      - Grid.Column=0
+      - Grid.RowSpan=1
+      - Grid.ColumnSpan=1
+      - Width=300
+      - MinWidth=300
+      - MaxWidth=300
+      - Height=30
+      - MinHeight=30
+      - MaxHeight=30
+      - Margin=305,250,0,0
+      - HorizontalAlignment=Left
+      - VerticalAlignment=Top
+  - target: Cortana.UI.Views.TaskbarSearchPage > Grid#RootGrid > Cortana.UI.Views.RichSearchBoxControl#SearchBoxControl
+    styles:
+      - Padding=0
+  - target: Cortana.UI.Views.TaskbarSearchPage > Grid#RootGrid > Cortana.UI.Views.RichSearchBoxControl#SearchBoxControl
+    styles:
+      - BorderBrush:=#111111
+  - target: Cortana.UI.Views.TaskbarSearchPage > Grid#RootGrid > Cortana.UI.Views.RichSearchBoxControl#SearchBoxControl
+    styles:
+      - BorderThickness=3,3,0,0
+  - target: Cortana.UI.Views.TaskbarSearchPage > * > Cortana.UI.Views.CortanaRichSearchBox#SearchTextBox > Grid > Border#BorderElement
+    styles:
+      - CornerRadius=0
+  - target: Cortana.UI.Views.TaskbarSearchPage > * > Cortana.UI.Views.CortanaRichSearchBox#SearchTextBox > Grid > Border#BorderElement
+    styles:
+      - BorderBrush:=#383838
+  - target: Cortana.UI.Views.TaskbarSearchPage > * > Cortana.UI.Views.CortanaRichSearchBox#SearchTextBox > Grid > Border#BorderElement
+    styles:
+      - BorderThickness=0,0,3,3
+  - target: Cortana.UI.Views.TaskbarSearchPage > * > Cortana.UI.Views.CortanaRichSearchBox#SearchTextBox > Grid > Border#BorderElement
+    styles:
+      - Background:=#1D1D1D
+  - target: Cortana.UI.Views.TaskbarSearchPage > * > Cortana.UI.Views.CortanaRichSearchBox#SearchTextBox
+    styles:
+      - FontFamily=Terminal
+  - target: Cortana.UI.Views.TaskbarSearchPage > * > Cortana.UI.Views.CortanaRichSearchBox#SearchTextBox
+    styles:
+      - FontWeight=Bold
+  - target: Cortana.UI.Views.TaskbarSearchPage > Grid#RootGrid > Grid#QueryFormulationRoot
+    styles:
+      - Grid.Row=0
+      - Grid.Column=0
+      - Grid.RowSpan=1
+      - Grid.ColumnSpan=1
+      - Width=589.509594
+      - MinWidth=589.509594
+      - MaxWidth=589.509594
+      - Height=403.923241
+      - MinHeight=403.923241
+      - MaxHeight=403.923241
+      - Margin=25.472637,301.122957,0,0
+      - HorizontalAlignment=Left
+      - VerticalAlignment=Top
+  - target: Cortana.UI.Views.TaskbarSearchPage > Grid#RootGrid > Grid#QueryFormulationRoot
+    styles:
+      - Padding=0
+  - target: Cortana.UI.Views.TaskbarSearchPage > Grid#RootGrid > Grid#QueryFormulationRoot > Cortana.UI.Views.QueryFormulationControl#QueryFormulation
+    styles:
+      - Grid.Row=0
+      - Grid.Column=0
+      - Grid.RowSpan=1
+      - Grid.ColumnSpan=1
+      - Width=Auto
+      - Height=Auto
+      - MinWidth=0
+      - MinHeight=0
+      - Margin=0
+      - HorizontalAlignment=Stretch
+      - VerticalAlignment=Stretch
+  - target: Cortana.UI.Views.TaskbarSearchPage > Grid#RootGrid > Grid#QueryFormulationRoot > Cortana.UI.Views.QueryFormulationControl#QueryFormulation
+    styles:
+      - Padding=0
+  - target: Cortana.UI.Views.TaskbarSearchPage > * > Cortana.UI.Views.QueryFormulationControl#QueryFormulation > Grid
+    styles:
+      - Grid.Row=0
+      - Grid.Column=0
+      - Grid.RowSpan=1
+      - Grid.ColumnSpan=1
+      - Width=Auto
+      - Height=Auto
+      - MinWidth=0
+      - MinHeight=0
+      - Margin=0
+      - HorizontalAlignment=Stretch
+      - VerticalAlignment=Stretch
+  - target: Cortana.UI.Views.TaskbarSearchPage > * > Cortana.UI.Views.QueryFormulationControl#QueryFormulation > Grid
+    styles:
+      - Padding=0
+  - target: Cortana.UI.Views.TaskbarSearchPage > * > Cortana.UI.Views.HostedWebView2Control#QueryFormulationHostedWebView2
+    styles:
+      - Grid.Row=0
+      - Grid.Column=0
+      - Grid.RowSpan=1
+      - Grid.ColumnSpan=1
+      - Width=Auto
+      - Height=Auto
+      - MinWidth=0
+      - MinHeight=0
+      - Margin=0
+      - HorizontalAlignment=Stretch
+      - VerticalAlignment=Stretch
+  - target: Cortana.UI.Views.TaskbarSearchPage > * > Cortana.UI.Views.HostedWebView2Control#QueryFormulationHostedWebView2
+    styles:
+      - Padding=0
+  - target: Cortana.UI.Views.TaskbarSearchPage > * > Cortana.UI.Views.HostedWebView2Control#QueryFormulationHostedWebView2 > Grid#WebViewGrid
+    styles:
+      - Grid.Row=0
+      - Grid.Column=0
+      - Grid.RowSpan=1
+      - Grid.ColumnSpan=1
+      - Width=Auto
+      - Height=Auto
+      - MinWidth=0
+      - MinHeight=0
+      - Margin=0
+      - HorizontalAlignment=Stretch
+      - VerticalAlignment=Stretch
+  - target: Cortana.UI.Views.TaskbarSearchPage > * > Cortana.UI.Views.HostedWebView2Control#QueryFormulationHostedWebView2 > Grid#WebViewGrid
+    styles:
+      - Padding=0
+  - target: StartMenu.StartHome > Grid#PageRoot > SemanticZoom#TopLevelRoot > Grid > ScrollViewer#ScrollViewer > ScrollContentPresenter#ScrollContentPresenter > Grid > ContentPresenter#ZoomedInPresenter > GridView#AllAppsGrid > Border > ScrollViewer#ScrollViewer > Border#Root > Grid > Grid > Windows.UI.Xaml.Controls.Primitives.ScrollBar#VerticalScrollBar > Grid#Root > Grid#VerticalRoot
+    styles:
+      - Margin=0,-50,0,40
+      - Height=500
+  - target: StartMenu.StartHome > Grid#PageRoot > SemanticZoom#TopLevelRoot > Grid > ScrollViewer#ScrollViewer > ScrollContentPresenter#ScrollContentPresenter > Grid > ContentPresenter#ZoomedInPresenter > GridView#AllAppsGrid > Border > ScrollViewer#ScrollViewer > Border#Root > Grid > Grid > Windows.UI.Xaml.Controls.Primitives.ScrollBar#VerticalScrollBar > Grid#Root > Grid#VerticalRoot > Rectangle#VerticalTrackRect
+    styles:
+      - Height=500
+  - target: StartMenu.StartHome
+    styles:
+      - MinWidth=680
+      - MaxWidth=680
+      - Margin=0
+      - Height=318
+      - Width=680
+  - target: StartMenu.StartHome > Grid#PageRoot > SemanticZoom#TopLevelRoot > Grid > ScrollViewer#ScrollViewer > ScrollContentPresenter#ScrollContentPresenter > Grid > ContentPresenter#ZoomedInPresenter > GridView#AllAppsGrid > Border > ScrollViewer#ScrollViewer > Border#Root > Grid > ScrollContentPresenter#ScrollContentPresenter > ItemsPresenter > ContentControl > ContentPresenter > Grid#TopLevelHeader
+    styles:
+      - Visibility=1
+  - target: StartMenu.StartHome > Grid#PageRoot > SemanticZoom#TopLevelRoot > Grid > ScrollViewer#ScrollViewer > ScrollContentPresenter#ScrollContentPresenter > Grid > ContentPresenter#ZoomedInPresenter > GridView#AllAppsGrid > Border > ScrollViewer#ScrollViewer > Border#Root > Grid > ScrollContentPresenter#ScrollContentPresenter > ItemsPresenter > ItemsWrapGrid > GridViewHeaderItem
+    styles:
+      - Visibility=1
+  - target: GridViewItem > Border#ContentBorder@CommonStates > Grid#DroppedFlickerWorkaroundWrapper > Border#BackgroundBorder
+    styles:
+      - Width=65
+      - Height=65
+      - Margin=3,0,3,7
+      - HorizontalAlignment=Center
+      - VerticalAlignment=Center
+      - RenderTransform:=<TranslateTransform X="0" Y="0"/>
+      - Background@PointerOver:=#10FFFFFF
+      - CornerRadius=0
+  - target: StartMenu.StartHome > Grid#PageRoot > StartMenu.FolderModal#StartFolderModal > Grid#Root > Border
+    styles:
+      - CornerRadius=5
+      - Background:=#1E1E1E
+      - BorderBrush:=#373737
+      - BorderThickness=5
+  - target: StartMenu.StartHome > Grid#PageRoot > SemanticZoom#TopLevelRoot > Grid > ScrollViewer#ScrollViewer > ScrollContentPresenter#ScrollContentPresenter > Grid > ContentPresenter#ZoomedInPresenter > GridView#AllAppsGrid > Border > ScrollViewer#ScrollViewer > Border#Root > Grid > ScrollContentPresenter#ScrollContentPresenter > ItemsPresenter > ItemsWrapGrid > GridViewItem > Border#ContentBorder
+    styles:
+      - Margin=0
+      - Height=65
+      - Width=65
+      - HorizontalAlignment=Center
+      - VerticalAlignment=Center
+  - target: StartMenu.StartHome > Grid#PageRoot > SemanticZoom#TopLevelRoot > Grid > ScrollViewer#ScrollViewer > ScrollContentPresenter#ScrollContentPresenter > Grid > ContentPresenter#ZoomedInPresenter > GridView#AllAppsGrid > Border > ScrollViewer#ScrollViewer > Border#Root > Grid > ScrollContentPresenter#ScrollContentPresenter > ItemsPresenter > ItemsWrapGrid > GridViewItem > Border#ContentBorder > Grid#DroppedFlickerWorkaroundWrapper > ContentPresenter#ContentPresenter > Grid > TextBlock
+    styles:
+      - Visibility=1
+  - target: StartMenu.StartHome > Grid#PageRoot > SemanticZoom#TopLevelRoot > Grid > ScrollViewer#ScrollViewer > ScrollContentPresenter#ScrollContentPresenter > Grid > ContentPresenter#ZoomedInPresenter > GridView#AllAppsGrid > Border > ScrollViewer#ScrollViewer
+    styles:
+      - VerticalSnapPointsType=Mandatory
+      - IsDeferredScrollingEnabled=False
+  - target: StartMenu.StartHome > Grid#PageRoot > SemanticZoom#TopLevelRoot > Grid > ScrollViewer#ScrollViewer > ScrollContentPresenter#ScrollContentPresenter > Grid > ContentPresenter#ZoomedInPresenter > GridView#AllAppsGrid > Border > ScrollViewer#ScrollViewer > Border#Root > Grid > Grid > Windows.UI.Xaml.Controls.Primitives.ScrollBar#VerticalScrollBar > Grid#Root > Grid#VerticalRoot
+    styles:
+      - Visibility=1
+  - target: StartMenu.StartHome > Grid#PageRoot > SemanticZoom#TopLevelRoot > Grid > ScrollViewer#ScrollViewer > ScrollContentPresenter#ScrollContentPresenter > Grid > ContentPresenter#ZoomedInPresenter > GridView#AllAppsGrid > Border > ScrollViewer#ScrollViewer > Border#Root > Grid > ScrollContentPresenter#ScrollContentPresenter > ItemsPresenter > ItemsWrapGrid > GridViewItem > Grid#RootGrid > ContentPresenter#ContentPresenter > StartMenu.CategoryControl > Grid#RootGrid > Border
+    styles:
+      - Visibility=1
+  - target: StartMenu.StartHome > Grid#PageRoot > SemanticZoom#TopLevelRoot > Grid > ScrollViewer#ScrollViewer > ScrollContentPresenter#ScrollContentPresenter > Grid > ContentPresenter#ZoomedInPresenter > GridView#AllAppsGrid > Border > ScrollViewer#ScrollViewer > Border#Root > Grid > ScrollContentPresenter#ScrollContentPresenter > ItemsPresenter > ItemsWrapGrid > GridViewItem > Grid#RootGrid > ContentPresenter#ContentPresenter > StartMenu.CategoryControl > Grid#RootGrid > Button#SeeAllButton > Grid > ContentPresenter#ContentPresenter
+    styles:
+      - Visibility=1
+  - target: GridViewItem > Grid#RootGrid
+    styles:
+      - Height=131.002132
+      - Width=217.503198
+      - Padding=35,-25,-35,0
+      - RenderTransform:=<TranslateTransform X="-62.5" Y="10"/>
+      - Margin=0,0,-21,0
+  - target: GridViewItem > Grid#RootGrid > ContentPresenter#ContentPresenter > StartMenu.CategoryControl > Grid#RootGrid > ScrollViewer#ScrollViewer > Border#Root > Grid > ScrollContentPresenter#ScrollContentPresenter > ItemsPresenter#ItemsPresenter > ItemsWrapGrid > ContentPresenter > Button#LogoContainer
+    styles:
+      - CornerRadius=0
+      - Height=65
+      - Width=65
+  - target: GridView#AllAppsGrid > ItemsWrapGrid
+    styles:
+      - Margin=0
+      - HorizontalAlignment=Left
+      - RenderTransform:=<TranslateTransform X="0" Y="0" />
+  - target: GridView#AllAppsGrid > ItemsWrapGrid > GridViewHeaderItem
+    styles:
+      - Visibility=Collapsed
+      - MinHeight=0
+      - Height=0
+      - Margin=0
+      - Padding=0
+  - target: GridView#AllAppsGrid > ItemsWrapGrid > GridViewItem > Border#ContentBorder
+    styles:
+      - Margin=0
+      - Width=65
+      - Height=65
+      - HorizontalAlignment=Center
+      - VerticalAlignment=Center
+  - target: GridView#AllAppsGrid > ItemsWrapGrid > GridViewItem > Border#ContentBorder > Grid#DroppedFlickerWorkaroundWrapper > ContentPresenter#ContentPresenter > Grid > TextBlock
+    styles:
+      - Visibility=Collapsed
+  - target: GridViewItem > Grid#RootGrid > ContentPresenter#ContentPresenter > StartMenu.CategoryControl
+    styles:
+      - MinHeight=130
+      - VerticalAlignment=Top
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot
+    styles:
+      - Width=640
+      - MinWidth=640
+      - MaxWidth=640
+      - Height=733.702914
+      - MinHeight=733.702914
+      - MaxHeight=733.702914
+      - RenderTransformOrigin=0.5,1
+      - RenderTransform:=<ScaleTransform ScaleX="{{min(0.95, min(max(1, InventoryHostWidth - 24) / 640, max(1, InventoryHostHeight - 24) / 733.702914))}}" ScaleY="{{min(0.95, min(max(1, InventoryHostWidth - 24) / 640, max(1, InventoryHostHeight - 24) / 733.702914))}}"/>
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot
+    styles:
+      - Width=640
+      - Height=733.702914
+      - HorizontalAlignment=Stretch
+      - VerticalAlignment=Stretch
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot > Grid#MainMenu
+    styles:
+      - RenderTransform:=<TranslateTransform X="0" Y="0"/>
+  - target: StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot > Grid#MainMenu > Grid#MainContent > Frame#StartFrame
+    styles:
+      - Width=680
+      - MinWidth=680
+      - MaxWidth=680
+      - Margin=-20,301.122957,0,0
+  - target: GridView#AllAppsGrid > ItemsWrapGrid
+    styles:
+      - Orientation=Horizontal
+  - target: GridView#AllAppsGrid > ItemsWrapGrid
+    styles:
+      - HorizontalAlignment=Left
+  - target: GridView#AllAppsGrid > ItemsWrapGrid > GridViewItem
+    styles:
+      - Margin=0
+  - target: GridView#AllAppsGrid > ItemsWrapGrid > GridViewItem
+    styles:
+      - Padding=0
+  - target: GridView#AllAppsGrid > ItemsWrapGrid > GridViewItem
+    styles:
+      - HorizontalContentAlignment=Left
+  - target: GridView#AllAppsGrid > ItemsWrapGrid > GridViewItem
+    styles:
+      - VerticalContentAlignment=Top
+  - target: GridView#AllAppsGrid > Border > ScrollViewer#ScrollViewer > Border#Root > Grid > ScrollContentPresenter#ScrollContentPresenter > ItemsPresenter > ItemsWrapGrid
+    styles:
+      - Orientation=Horizontal
+  - target: GridView#AllAppsGrid > Border > ScrollViewer#ScrollViewer > Border#Root > Grid > ScrollContentPresenter#ScrollContentPresenter > ItemsPresenter > ItemsWrapGrid
+    styles:
+      - HorizontalAlignment=Left
+  - target: GridView#AllAppsGrid > Border > ScrollViewer#ScrollViewer > Border#Root > Grid > ScrollContentPresenter#ScrollContentPresenter > ItemsPresenter > ItemsWrapGrid > GridViewItem
+    styles:
+      - Margin=0
+  - target: GridView#AllAppsGrid > Border > ScrollViewer#ScrollViewer > Border#Root > Grid > ScrollContentPresenter#ScrollContentPresenter > ItemsPresenter > ItemsWrapGrid > GridViewItem
+    styles:
+      - Padding=0
+  - target: GridView#AllAppsGrid > Border > ScrollViewer#ScrollViewer > Border#Root > Grid > ScrollContentPresenter#ScrollContentPresenter > ItemsPresenter > ItemsWrapGrid > GridViewItem
+    styles:
+      - HorizontalContentAlignment=Left
+  - target: GridView#AllAppsGrid > Border > ScrollViewer#ScrollViewer > Border#Root > Grid > ScrollContentPresenter#ScrollContentPresenter > ItemsPresenter > ItemsWrapGrid > GridViewItem
+    styles:
+      - VerticalContentAlignment=Top
+  - target: SemanticZoom#TopLevelRoot > * > ScrollViewer#ScrollViewer
+    styles:
+      - VerticalSnapPointsType=Mandatory
+      - HorizontalSnapPointsType=None
+      - IsDeferredScrollingEnabled=False
+  - target: Cortana.UI.Views.TaskbarSearchPage
+    styles:
+      - Width=Auto
+      - Height=Auto
+      - MinWidth=0
+      - MinHeight=0
+      - MaxWidth=10000
+      - MaxHeight=10000
+      - Margin=0
+      - HorizontalAlignment=Stretch
+      - VerticalAlignment=Stretch
+      - RenderTransform:=<TranslateTransform X="0" Y="0"/>
+      - ActualWidth=>InventorySearchPageWidth
+      - ActualHeight=>InventorySearchPageHeight
+  - target: Cortana.UI.Views.TaskbarSearchPage > Grid#RootGrid
+    styles:
+      - HorizontalAlignment=Left
+  - target: Cortana.UI.Views.TaskbarSearchPage > Grid#RootGrid
+    styles:
+      - VerticalAlignment=Top
+  - target: Cortana.UI.Views.TaskbarSearchPage > Grid#RootGrid
+    styles:
+      - Margin=12,12,0,0
+  - target: Cortana.UI.Views.TaskbarSearchPage > Grid#RootGrid
+    styles:
+      - RenderTransformOrigin=0,0
+  - target: Cortana.UI.Views.TaskbarSearchPage > Grid#RootGrid
+    styles:
+      - RenderTransform:=<TransformGroup><ScaleTransform ScaleX="{{min(0.95, min(max(1, InventorySearchPageWidth - 24) / 640, max(1, InventorySearchPageHeight - 24) / 733.702914))}}" ScaleY="{{min(0.95, min(max(1, InventorySearchPageWidth - 24) / 640, max(1, InventorySearchPageHeight - 24) / 733.702914))}}"/><TranslateTransform X="{{max(0, (InventorySearchPageWidth - 24 - 640 * (min(0.95, min(max(1, InventorySearchPageWidth - 24) / 640, max(1, InventorySearchPageHeight - 24) / 733.702914)))) / 2)}}" Y="{{max(0, InventorySearchPageHeight - 24 - 733.702914 * (min(0.95, min(max(1, InventorySearchPageWidth - 24) / 640, max(1, InventorySearchPageHeight - 24) / 733.702914))))}}"/></TransformGroup>
+  - target: StartDocked.AppListView#NavigationPanePlacesListView > Border > ScrollViewer#ScrollViewer > Border#Root > Grid > ScrollContentPresenter#ScrollContentPresenter > ItemsPresenter > ItemsStackPanel > StartDocked.AppListViewItem
+    styles:
+      - Height=65
+      - Width=65
+      - Margin=-12,0,12,0
+  - target: StartDocked.AppListViewItem > Grid#ContentBorder@CommonStates
+    styles:
+      - Margin=3,3,4,3
+      - Background@PointerOver:=dark-gray
+  - target: StartDocked.AppListViewItem > Grid#ContentBorder > ContentPresenter#ContentPresenter > FontIcon > Grid > TextBlock
+    styles:
+      - FontWeight=bold
+      - FontSize=30
+      - Foreground=#959595
+  - target: StartDocked.NavigationPaneView#UserControl > Grid#RootPanel > StartDocked.AppListView#NavigationPanePlacesListView
+    styles:
+      - Margin=0,-10,0,-10
+  - target: StartDocked.NavigationPaneView#UserControl > Grid#RootPanel
+    styles:
+      - Background=transparent
+      - BorderBrush=transparent
+      - BorderThickness=0
+  - target: StartDocked.NavigationPaneView#UserControl > Grid#RootPanel > Border
+    styles:
+      - Background=transparent
+      - BorderThickness=0
+      - Visibility=0
+  - target: StartDocked.NavigationPaneView#UserControl > Grid#RootPanel > StartDocked.PowerOptionsView#PowerButton
+    styles:
+      - Margin=-92,-513,0,513
+      - Grid.ColumnSpan=2
+      - Grid.RowSpan=1
+  - target: StartDocked.PowerOptionsView#PowerButton > StartDocked.NavigationPaneButton#PowerButton > Grid > ContentPresenter#ContentPresenter > Grid > FontIcon
+    styles:
+      - FontWeight=Bold
+      - Foreground=white
+      - FontSize=38
+  - target: StartDocked.NavigationPaneView#UserControl > Grid#RootPanel > StartDocked.UserTileView#UserTile
+    styles:
+      - Visibility=1
+  - target: StartDocked.AppListView#NavigationPanePlacesListView, ListView#NavigationPanePlacesListView
+    styles:
+      - RenderTransform:=<TranslateTransform X="-13.5" Y="0"/>
+  - target: StartDocked.PowerOptionsView#PowerButton
+    styles:
+      - RenderTransform:=<TranslateTransform X="-15.5" Y="-3"/>
+  - target: GridViewItem > Border#ContentBorder
+    styles:
+      - Padding=0
+      - Background:=Transparent
+      - RenderTransform:=<TranslateTransform X="15.5" Y="0"/>
+  - target: GridViewItem > Border#ContentBorder > Grid#DroppedFlickerWorkaroundWrapper
+    styles:
+      - Margin=0
+      - Width=65
+      - Height=65
+      - HorizontalAlignment=Center
+      - VerticalAlignment=Center
+      - RenderTransform:=<TranslateTransform X="0" Y="0"/>
+      - Background:=Transparent
+  - target: GridViewItem > Border#ContentBorder > Grid#DroppedFlickerWorkaroundWrapper > ContentPresenter#ContentPresenter
+    styles:
+      - Margin=0
+      - Padding=0
+      - Width=65
+      - Height=65
+      - HorizontalAlignment=Center
+      - VerticalAlignment=Center
+      - HorizontalContentAlignment=Center
+      - VerticalContentAlignment=Center
+      - RenderTransform:=<TranslateTransform X="-15.5" Y="0"/>
+  - target: ScrollViewer > ScrollContentPresenter > Border > StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot > Grid#MainMenu > Grid#MainContent > Grid > StartMenu.SearchBoxToggleButton#SearchBoxToggleButton > Grid > Rectangle#TextCaret
+    styles:
+      - Margin=7,0,0,0
+themeResourceVariables:
+  - ''
+webContentStyles:
+  - target: '#qfPreviewPane, .previewContainer, .preview-content-container'
+    styles:
+      - 'display: none !important'
+  - target: '.suggsListContainer, #qfSuggsList, .results-container, .left-pane'
+    styles:
+      - 'width: 100% !important'
+      - 'max-width: 100% !important'
+      - 'flex: 1 1 100% !important'
+  - target: '.main-content-container, .search-results-grid, #searchPane'
+    styles:
+      - 'grid-template-columns: 100% !important'
+      - 'display: block !important'
+      - 'width: 100% !important'
+  - target: .suggContainer, .groupContainer, .card
+    styles:
+      - 'width: 100% !important'
+      - 'box-sizing: border-box !important'
+      - 'background-color: transparent !important'
+      - 'box-shadow: none !important'
+      - 'border: none !important'
+  - target: '.contextMenu, #menuContainer'
+    styles:
+      - 'backdrop-filter: blur(3.5px) !important'
+      - '-webkit-backdrop-filter: blur(3.5px) !important'
+      - 'background-color: #1E1E1E76 !important'
+  - target: h4, .suggContainer, .groupTitle, .suggsListContainer, .title, .details, .secondaryText, .scope-tile > div
+    styles:
+      - 'font-family: "Segoe UI Variable Text" !important'
+  - target: .scope-tile > div
+    styles:
+      - 'border: none !important'
+      - 'padding: 0px 9.5px !important'
+      - 'background-color: transparent !important'
+      - 'opacity: .7 !important'
+      - 'font-size: 14px !important'
+      - 'margin-top: -1px !important'
+  - target: .scope-tile > div:hover
+    styles:
+      - 'opacity: .9 !important'
+  - target: .previewContainer
+    styles:
+      - 'border-radius: 20px 20px 10px 10px !important'
+      - 'max-height: unset !important'
+      - 'box-shadow: 0px 0px 0px 1px rgba(0,0,0,.0605), 0 1px 0 rgba(255,255,255,.7) inset !important'
+      - 'height: 464px !important'
+      - 'top: 1px !important'
+      - 'left: 1px !important'
+      - 'min-height: unset !important'
+      - 'margin-right: 25px !important'
+  - target: '.scope-with-background__backButton, #gr11, #pp_Share, #pp_Review, #chatButtonRight, .curatedSettingsGroup, .scope-with-background__rightCaret, .suggContainer .secondaryMetadata.secondaryText.annotation, div[data-region="TopApps"], #gr36, #temporaryMessages, .additionalInfoText.annotation, .userProfileMenuIcon, div[data-region="Store"], div[aria-label="Localizar resultados em loja"], .previewContainer .divider'
+    styles:
+      - 'display: none !important'
+  - target: .bottomPill > div::after
+    styles:
+      - 'content: "" !important'
+      - 'width: 100% !important'
+      - 'height: 24px !important'
+      - 'background-color: rgba(0,0,0,.0605) !important'
+      - 'display: block !important'
+      - 'border-radius: 6px !important'
+      - 'bottom: 7px !important'
+      - 'left: 0% !important'
+      - 'position: absolute !important'
+      - 'animation: selectorBar 187ms forwards !important'
+      - 'transform-origin: center !important'
+      - 'z-index: -1 !important'
+  - target: .bottomPill > div
+    styles:
+      - 'opacity: 1 !important'
+      - 'color: black !important'
+      - 'font-weight: 600 !important'
+      - 'font-size: 13px !important'
+  - target: .darkTheme .bottomPill > div
+    styles:
+      - 'color: white !important'
+  - target: .darkTheme .bottomPill > div::after
+    styles:
+      - 'background-color: rgba(255,255,255,.0765) !important'
+  - target: ':root'
+    styles:
+      - '--webview-winui-menuPadding: 3px !important'
+      - '--webview-winui-menuRadius: 14px !important'
+      - '--webview-winui-menuGap: 2px !important'
+      - '--webview-winui-menuBorder: 1px solid rgba(0,0,0,0.16) !important'
+      - '--webview-winui-menuShadow: 0 9px 16px 0 rgba(0,0,0,0.16) !important'
+      - '--webview-winui-itemPadding: 3px 8px 3px 8px !important'
+      - '--webview-winui-itemRadius: 5px !important'
+      - '--webview-winui-itemHeight: 28px !important'
+  - target: .contextMenu
+    styles:
+      - 'padding: var(--webview-winui-menuPadding) !important'
+      - 'margin: 0 !important'
+      - 'border: unset !important'
+      - 'box-shadow: unset !important'
+      - 'outline: unset !important'
+      - 'min-width: unset !important'
+      - 'width: unset !important'
+      - 'display: flex !important'
+      - 'flex-direction: column !important'
+      - 'border-radius: var(--webview-winui-menuRadius) !important'
+      - 'gap: var(--webview-winui-menuGap) !important'
+  - target: .contextMenu .menuItem
+    styles:
+      - 'margin: 0 !important'
+      - 'border: 0 !important'
+      - 'padding: var(--webview-winui-itemPadding) !important'
+      - 'background-color: transparent !important'
+      - 'position: relative !important'
+      - 'display: flex !important'
+      - 'align-items: center !important'
+      - 'border-radius: var(--webview-winui-itemRadius) !important'
+      - 'min-height: var(--webview-winui-itemHeight) !important'
+  - target: .contextMenu .menuItem:hover::after
+    styles:
+      - 'content: "" !important'
+      - 'width: 100% !important'
+      - 'height: 100% !important'
+      - 'display: block !important'
+      - 'top: 0 !important'
+      - 'left: 0 !important'
+      - 'position: absolute !important'
+      - 'border-radius: var(--webview-winui-itemRadius) !important'
+      - 'opacity: 0.1 !important'
+      - 'background-color: #000 !important'
+  - target: .darkTheme .contextMenu .menuItem:hover::after
+    styles:
+      - 'background-color: #fff !important'
+  - target: .contextMenu .menuItem:focus::after
+    styles:
+      - 'opacity: 0.05 !important'
+  - target: .contextMenu .divider
+    styles:
+      - 'border-top-color: rgba(0,0,0,.0803) !important'
+  - target: .darkTheme .contextMenu .divider
+    styles:
+      - 'border-top-color: rgba(255,255,255,.0837) !important'
+  - target: '#menuContainer'
+    styles:
+      - 'min-width: unset !important'
+      - 'width: unset !important'
+      - 'opacity: 0 !important'
+      - 'transition: opacity 230ms ease, transform 280ms ease, box-shadow 830ms ease !important'
+      - 'transform: translateY(-14px) !important'
+      - 'box-shadow: unset !important'
+      - 'border-radius: var(--webview-winui-menuRadius) !important'
+      - 'border: var(--webview-winui-menuBorder) !important'
+  - target: '#menuContainer.show'
+    styles:
+      - 'opacity: 1 !important'
+      - 'transform: translateY(0px) !important'
+      - 'box-shadow: var(--webview-winui-menuShadow) !important'
+  - target: '*:not(.divider):not(#menuContainer)'
+    styles:
+      - 'border-color: transparent !important'
+  - target: .darkTheme .contextMenu
+    styles:
+      - 'box-shadow: 0 0 0 1px rgba(0,0,0,.25) !important'
+  - target: .darkTheme .previewContainer
+    styles:
+      - 'box-shadow: 0 0 0 1px rgba(0,0,0,.2), 0 0 0 1px rgba(255,255,255,.06) inset, 0 1.5px 0 0 rgba(255,255,255,.06) inset !important'
+  - target: '@keyframes selectorBar'
+    styles:
+      - '0% {transform: scale(0%,100%); opacity: 0%;} 100%{ transform: scale(100%,100%); opacity: 100%;}'
+  - target: '@keyframes invoke'
+    styles:
+      - 'from{transform: translateY(20%); opacity: 0;} to{transform: translateY(0); opacity: 1;}'
+  - target: .suggestions *, .selectable
+    styles:
+      - 'transition: background-color 83ms linear !important'
+      - 'font-weight: normal !important'
+  - target: .previewDataSection .icon
+    styles:
+      - 'color: var(--accent9) !important'
+      - 'opacity: 1 !important'
+      - 'fill-opacity: 1 !important'
+  - target: .darkTheme .previewDataSection .icon
+    styles:
+      - 'color: var(--accent19) !important'
+  - target: .previewDataSection .sectionItem > div
+    styles:
+      - 'font-size: 12px !important'
+      - 'color: black !important'
+  - target: .previewDataSection .icon span
+    styles:
+      - 'font-size: 16px !important'
+  - target: .previewContainer .previewIcon .iconContainer
+    styles:
+      - 'background-color: rgba(255,255,255,.065) !important'
+      - 'box-shadow: 0 0 0 1px rgba(0,0,0,.1) !important'
+      - 'border-radius: 8px !important'
+      - 'width: 256px !important'
+      - 'height: 110px !important'
+  - target: .previewContainer .previewIcon .iconContainer img
+    styles:
+      - 'margin-block: 48px 0 !important'
+  - target: .previewContainer .previewIcon
+    styles:
+      - 'display: grid !important'
+      - 'margin-top: 0 !important'
+  - target: .previewContainer .previewIcon .title
+    styles:
+      - 'order: -1 !important'
+      - 'margin-bottom: 16px !important'
+      - 'margin-inline: 0 !important'
+      - 'justify-self: left !important'
+  - target: .previewContainer .previewIcon .title span
+    styles:
+      - 'font-weight: 600 !important'
+  - target: '#suggestionsList .suggDetailsContainer .iconContainer'
+    styles:
+      - 'background-color: rgba(255,255,255,.065) !important'
+      - 'box-shadow: 0 0 0 1px rgba(0,0,0,.1) !important'
+      - 'border-radius: 4px !important'
+      - 'width: 34px !important'
+      - 'height: 34px !important'
+  - target: '#suggestionsList .iconContainer .icon'
+    styles:
+      - 'display: flex !important'
+      - 'justify-self: center !important'
+      - 'margin: 5px 0 0 0 !important'
+  - target: .suggDetailsContainer .primaryText, .suggDetailsContainer .secondaryText
+    styles:
+      - 'margin: 0 0 0 16px !important'
+  - target: .groupHeader
+    styles:
+      - 'border-radius: 8px !important'
+      - 'margin-inline: auto !important'
+      - 'margin-block: 8px 4px !important'
+  - target: .withOpenPreviewPaneBtn
+    styles:
+      - 'background-color: transparent !important'
+  - target: .groupTitleText
+    styles:
+      - 'font-weight: 600 !important'
+  - target: .groupTitle
+    styles:
+      - 'margin-inline: 0 !important'
+  - target: .openPreviewIcon
+    styles:
+      - 'margin: 0 0 8px 10px !important'
+  - target: '#qfContainer'
+    styles:
+      - 'margin: 0 6px 0 20px !important'
+      - 'padding: 0 !important'
+  - target: .previewDataSection .annotation .label
+    styles:
+      - 'width: 110px !important'
+      - 'max-width: unset !important'
+      - 'min-width: 110px !important'
+  - target: .darkTheme .previewDataSection .sectionItem > div
+    styles:
+      - 'color: white !important'
+  - target: .divider
+    styles:
+      - 'border-bottom: none !important'
+  - target: .leftPaneZIsuggestions
+    styles:
+      - 'margin-left: 6px !important'
+  - target: '*'
+    styles:
+      - 'scrollbar-width: none !important'
+      - 'cursor: default !important'
+  - target: .leftPill::before
+    styles:
+      - 'display: none !important'
+  - target: .openPreviewIcon .iconContent.cortanaFontIcon
+    styles:
+      - 'font-size: 10px !important'
+  - target: div[data-region="MRUHistory"] > .suggsList, div[data-region="MRUHistory"] .suggContainer
+    styles:
+      - 'width: 100% !important'
+      - 'max-width: 100% !important'
+      - 'box-sizing: border-box !important'
+  - target: .expanderCircle .iconContent
+    styles:
+      - 'padding-left: 0 !important'
+      - 'color: #000 !important'
+  - target: .darkTheme .expanderCircle .iconContent
+    styles:
+      - 'color: #fff !important'
+  - target: '#gr43 *'
+    styles:
+      - 'font-weight: 600 !important'
+  - target: '#qfPreviewPane'
+    styles:
+      - 'min-width: 320px !important'
+  - target: '#localPane .secondaryText.annotation, #topHitHeader'
+    styles:
+      - 'display: none !important'
+  - target: .resultsContainer .suggestion
+    styles:
+      - 'animation: SimpleFade 250ms ease-out forwards !important'
+  - target: '@keyframes SimpleFade'
+    styles:
+      - 'from{opacity: 0;} to{opacity: 1;} !important'
+  - target: '#scopesHeader, .leftPaneZIsuggestions:has(#gr53), .curatedSettingsGroup, #gr36, div[data-region="TopApps"]'
+    styles:
+      - 'display: none !important'
+webContentCustomJs: ''
