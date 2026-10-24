@@ -129,19 +129,22 @@ if not exist "%TEMP%\MCRice" mkdir "%TEMP%\MCRice"
 echo Lade Konfigurationsdateien herunter...
 echo.
 
-echo [1/5] windows-11-taskbar-styler.txt:
+echo [1/6] windows-11-taskbar-styler.txt:
 curl -L -# "https://raw.githubusercontent.com/Thillager/MCRice/main/windows-11-taskbar-styler.txt" -o "%TEMP%\MCRice\windows-11-taskbar-styler.txt"
 
-echo [2/5] icon-resource-redirect.txt:
+echo [2/6] icon-resource-redirect.txt:
 curl -L -# "https://raw.githubusercontent.com/Thillager/MCRice/main/icon-resource-redirect.txt" -o "%TEMP%\MCRice\icon-resource-redirect.txt"
 
-echo [3/5] windows-11-settings-styler.txt:
+echo [3/6] windows-11-settings-styler.txt:
 curl -L -# "https://raw.githubusercontent.com/Thillager/MCRice/main/windows-11-settings-styler.txt" -o "%TEMP%\MCRice\windows-11-settings-styler.txt"
 
-echo [4/5] Hotkeys.ahk:
+echo [3/6] windows-11-start-menu-styler.txt:
+curl -L -# "https://raw.githubusercontent.com/Thillager/MCRice/main/windows-11-start-menu-styler.txt" -o "%TEMP%\MCRice\windows-11-start-menu-styler.txt"
+
+echo [5/6] Hotkeys.ahk:
 curl -L -# "https://raw.githubusercontent.com/Thillager/MCRice/main/Hotkeys.ahk" -o "%TEMP%\MCRice\Hotkeys.ahk"
 
-echo [5/5] Thillagers Block Hud_1.0.0.rmskin:
+echo [6/6] Thillagers Block Hud_1.0.0.rmskin:
 curl -L -# "https://raw.githubusercontent.com/Thillager/MCRice/main/Thillagers%%20Block%%20Hud_1.0.0.rmskin" -o "%TEMP%\MCRice\Thillagers Block Hud_1.0.0.rmskin"
 
 echo.
@@ -205,10 +208,29 @@ echo 5. Ersetze den gesamten Text dort durch den Inhalt aus deiner Zwischenablag
 echo.
 pause
 
+:SCHRITT_WINDHAWK_4
+cls
+echo ===================================================
+echo  SCHRITT 6: Windhawk - Windows 11 Startmenu Styler
+echo ===================================================
+echo.
+echo Die Konfiguration für "Windows 11 Startmenu Styler" wurde kopiert!
+type "%TEMP%\MCRice\windows-11-start-menu-styler.txt" | clip
+
+echo.
+echo ANWEISUNG:
+echo 1. Klicke in Windhawk oben rechts auf 'Durchsuchen'.
+echo 2. Gib die Mod ID 'windows-11-start-menu-styler' ein und füge die Mod hinzu.
+echo 3. Klicke bei der Mod auf 'Details' und gehe zu den 'Einstellungen'.
+echo 4. Schalte auf 'Textual mode' um.
+echo 5. Ersetze den gesamten Text dort durch den Inhalt aus deiner Zwischenablage (STRG + A, dann STRG + V) und speichere.
+echo.
+pause
+
 :SCHRITT_RAINMETER
 cls
 echo ===================================================
-echo  SCHRITT 7: Rainmeter Skin
+echo  SCHRITT 8: Rainmeter Skin
 echo ===================================================
 echo.
 echo Starte den Skin "Thillagers Block Hud"...
@@ -224,7 +246,7 @@ pause
 :SCHRITT_HOTKEYS
 cls
 echo ===================================================
-echo  SCHRITT 8: Hotkeys.ahk Autostart
+echo  SCHRITT 9: Hotkeys.ahk Autostart
 echo ===================================================
 echo.
 echo Kopiere Hotkeys.ahk in den Autostart-Ordner...
