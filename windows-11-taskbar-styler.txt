@@ -1,0 +1,81 @@
+theme: ''
+styleConstants:
+  - IconBackground=<ImageBrush Stretch="UniformToFill" ImageSource="https://raw.githubusercontent.com/ramensoftware/windows-11-taskbar-styling-guide/refs/heads/main/Themes/Minecraft%20Hotbar/Assets/hotbar.png" />
+  - ActiveBackground=<ImageBrush Stretch="UniformToFill" ImageSource="https://raw.githubusercontent.com/ramensoftware/windows-11-taskbar-styling-guide/refs/heads/main/Themes/Minecraft%20Hotbar/Assets/hotbaractive.png" />
+controlStyles:
+  - target: Grid#RootGrid > Taskbar.TaskbarBackground > Grid
+    styles:
+      - Background:=transparent
+  - target: Taskbar.TaskbarFrame
+    styles:
+      - Width=Auto
+      - Height=58
+      - HorizontalAlignment=Center
+  - target: Taskbar.TaskbarFrame > Grid#RootGrid
+    styles:
+      - Background:=transparent
+      - Margin=0,0,0,0
+      - Padding=12,0,12,0
+  - target: Taskbar.TaskbarFrame > Grid#RootGrid > Taskbar.TaskbarBackground#BackgroundControl > Grid > Rectangle#BackgroundFill
+    styles:
+      - Fill:=transparent
+      - Margin=0
+  - target: Rectangle#BackgroundStroke
+    styles:
+      - Fill=Transparent
+  - target: Taskbar.TaskbarFrame
+    styles:
+      - Width=Auto
+      - Height=70
+      - HorizontalAlignment=Center
+  - target: Taskbar.TaskListButtonPanel
+    styles:
+      - MinWidth=55
+  - target: Grid#IconPanel, Taskbar.TaskListLabeledButtonPanel
+    styles:
+      - MinWidth=55
+  - target: Grid#IconPanel@CommonStates > Border#BackgroundElement, Taskbar.TaskListLabeledButtonPanel@CommonStates > Border#BackgroundElement
+    styles:
+      - CornerRadius=0
+      - Margin=-3,3.5,-3,3.5
+      - Background:=$IconBackground
+      - Background@InactivePointerOver:=$ActiveBackground
+      - Background@ActiveNormal:=$ActiveBackground
+      - Background@ActivePointerOver:=$ActiveBackground
+      - Background@MultiWindowPointerOver:=$ActiveBackground
+      - BorderThickness=0
+  - target: Grid#IconPanel@CommonStates > Image#Icon, Taskbar.TaskListLabeledButtonPanel#IconPanel@CommonStates > Image#Icon
+    styles:
+      - Margin=5.5,0,-5.5,0
+      - HorizontalAlignment=Center
+      - VerticalAlignment=Center
+  - target: Grid#IconPanel@RunningIndicatorStates > Rectangle#RunningIndicator, Taskbar.TaskListLabeledButtonPanel@RunningIndicatorStates > Rectangle#RunningIndicator
+    styles:
+      - Fill=#90FFFFFF
+      - Height=2
+      - Width=8
+  - target: Taskbar.TaskListButtonPanel#ExperienceToggleButtonRootPanel > Border#BackgroundElement
+    styles:
+      - CornerRadius=0
+      - Margin=-3,3.5,-3,3.5
+      - Background:=$IconBackground
+      - Background@InactivePointerOver:=$ActiveBackground
+      - Background@ActiveNormal:=$ActiveBackground
+      - Background@ActivePointerOver:=$ActiveBackground
+      - BorderThickness=0
+  - target: Taskbar.ExperienceToggleButton#LaunchListButton[AutomationProperties.AutomationId=StartButton] > Taskbar.TaskListButtonPanel@CommonStates > Border#BackgroundElement
+    styles:
+      - CornerRadius=0
+      - Margin=-3,3.5,-3,3.5
+      - Background:=$IconBackground
+      - Background@InactivePointerOver:=$ActiveBackground
+      - Background@ActiveNormal:=$ActiveBackground
+      - Background@ActivePointerOver:=$ActiveBackground
+      - BorderThickness=0
+  - target: Border#MultiWindowElement
+    styles:
+      - Visibility=Collapsed
+themeResourceVariables:
+  - ''
+clickThroughTaskbar: 0
+xamlDiagnosticsHandling: ''

@@ -1,0 +1,9 @@
+theme: OLED_variant_ModrinthGreen
+styleConstants:
+  - ''
+controlStyles:
+  - target: ''
+    styles:
+      - ''
+themeResourceVariables:
+  - ''

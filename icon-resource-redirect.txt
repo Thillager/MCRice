@@ -1,0 +1,9 @@
+iconTheme: Minecraft Axolotle|themes/icons/Wasiabbas4pk/Minecraft%20Axolotle.zip
+disableThumbnails: 1
+allResourceRedirect: 1
+themePaths:
+  - ''
+redirectionResourcePaths:
+  - original: ''
+    redirect: ''
+themeFolder: ''
